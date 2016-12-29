@@ -1,0 +1,102 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+}
+<div class="fh5co-slider">
+    <div class="container">
+        <div class="owl-carousel owl-carousel-main">
+            <div><img src="/Content/images/slider_1.jpg" alt=""></div>
+            <div><img src="/Content/images/slider_2.jpg" alt=""></div>
+            <div><img src="/Content/images/slider_3.jpg" alt=""></div>
+        </div>
+    </div>
+</div>
+<!-- Slider -->
+<h3>Актеры </h3><p> @Html.ActionLink("Добавить", "CreateActors")</p>
+<div class="row row-bottom-padded-sm">
+    @foreach (var p in ViewBag.Actors)
+            {
+        <div class="col-md-4">
+            <div class="fh5co-service text-center">
+                <img src="/Content/images/slider_3.jpg" class="img-responsive img-bordered" alt="">
+                <h3>@p.Name</h3>
+                <p>
+
+                <p>Кто это?: @p.Info</p>
+
+                <p>@Html.ActionLink("Смотреть", "DetailsActors", new { id = p.Id })</p>
+                <p> @Html.ActionLink("Изменить", "EditActors", new { id = p.Id })</p>
+                <p> @Html.ActionLink("Удалить", "DeleteActors", new { id = p.Id })</p>
+                </p>
+            </div>
+        </div>
+    }
+</div>
+
+
+        <div class="row row-bottom-padded-md">
+            <div class="col-md-8 col-md-offset-2 text-center ts-intro">
+                <h1>​ИСПОЛНИЛОСЬ 80 ЛЕТ СО ДНЯ РОЖДЕНИЯ ЭДУАРДА МАРЦЕВИЧА</h1>
+                <p class="fh5co-lead">Он снялся почти в 80 фильмах, в том числе в картинах «Отцы и дети», «Война и мир», «Звезда и смерть Хоакина Мурьеты». Об актёрской карьере мечтал с детства, но на прослушиваниях в вуз услышал от педагога: «Вам не стоит заниматься театральным искусством». Однако Марцевич не сдался – он поступил в Щепкинское училище и уже на последнем курсе получил предложение сыграть Гамлета в постановке знаменитого Николая Охлопкова. Репортаж Светланы Астрецовой (телеканал "Культура").</p>
+            </div>
+        </div>
+        <div class="row row-bottom-padded-sm">
+            <div class="col-md-4">
+                <div class="fh5co-service text-center">
+                    <span class="fh5co-service-icon fh5co-icon-pentagon"><i class="icon-tools-2"></i></span>
+                    <h3>Спектакли технарей</h3>
+                    <p>Лучший Сервис</p>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="fh5co-service text-center">
+                    <span class="fh5co-service-icon fh5co-icon-pentagon"><i class="icon-trophy22"></i></span>
+                    <h3>Открытые рыцарские турниры</h3>
+                    <p>И ты на коне.</p>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="fh5co-service text-center">
+                    <span class="fh5co-service-icon fh5co-icon-pentagon"><i class="icon-profile-male"></i></span>
+                    <h3>Буфет работает 24/7</h3>
+                    <p>Тефтели тёть Тани - просто чудо.</p>
+                </div>
+            </div>
+        </div>
+        <div class="row row-bottom-padded-sm">
+            <div class="col-md-6">
+                <p><img src="/Content/images/slider_1.jpg" alt="Free HTML5 Bootstrap Template" class="img-responsive img-bordered"></p>
+            </div>
+            <div class="col-md-6 padded-top">
+                <h3>​ДЕБЮТ В МАЛОМ</h3>
+                <p>Год назад на Малой сцене состоялась премьера спектакля «Поздняя любовь» А.Н.Островского. Предлагаем вашему вниманию интервью с постановщиком «Поздней любви» режиссёром Андреем Цисаруком, опубликованное в первом номере газеты «Малый театр».</p>
+                <ul class="ul_style_1">
+                    <li>Представление прошло уже более двадцати раз и пользуется успехом у зрителя.</li>
+                    <li>«Недоросль» роль Цыфиркина впервые сыграет артист Олег Щигорец.</li>
+                    <li>Открытие исторической сцены дополнили новым «Слугой двух господ»</li>
+                    <li>Елизавета Авдошина, «Независимая газета», 22 декабря 2016 года</li>
+                </ul>
+            </div>
+        </div>
+
+        <h3>Спектакли </h3><p> @Html.ActionLink("Добавить", "Create")</p>
+        <div class="row row-bottom-padded-sm">
+            @foreach (var p in ViewBag.Performances)
+            {
+                <div class="col-md-4">
+                    <div class="fh5co-service text-center">
+                        <img src="/Content/images/slider_3.jpg" class="img-responsive img-bordered" alt="">
+                        <h3>@p.Name</h3>
+                        <p>
+
+                            <p>Цена: @p.Price</p>
+
+                            <p>@Html.ActionLink("Смотреть", "Details", new { id = p.Id })</p>
+                            <p> @Html.ActionLink("Изменить", "Edit", new { id = p.Id })</p>
+                        <p> @Html.ActionLink("Удалить", "Delete", new { id = p.Id })</p>
+                        </p>
+                    </div>
+                </div>
+            }
+        </div>
+        
+

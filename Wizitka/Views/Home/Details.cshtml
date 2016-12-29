@@ -1,0 +1,48 @@
+﻿@using Wizitka.Models
+@model Wizitka.Models.Performance
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<div class="row row-bottom-padded-md">
+    <div class="col-md-8 col-md-offset-2 text-center ts-intro">
+
+        <h1>Details</h1>
+
+        <div class="fh5co-lead">
+            <h4>Performance</h4>
+            <hr />
+            <dl class="dl-horizontal">
+                <dt>
+                    @Html.DisplayNameFor(model => model.Name)
+                </dt>
+
+                <dd>
+                    @Html.DisplayFor(model => model.Name)
+                </dd>
+
+                <dt>
+                    @Html.DisplayNameFor(model => model.Price)
+                </dt>
+
+                <dd>
+                    @Html.DisplayFor(model => model.Price)
+                </dd>
+                <div class="display-label"><b>Курсы</b></div>
+                <ul>
+                    @foreach (Actor actors in Model.Actors)
+            {
+                        <li>@actors.Name</li>
+                        <li>@actors.Info</li>
+                    }
+                </ul>
+
+            </dl>
+        </div>
+        <p>
+            @Html.ActionLink("Изменить", "Edit", new { id = Model.Id }) |
+            @Html.ActionLink("На Главную", "Index")
+        </p>
+    </div>
+</div>

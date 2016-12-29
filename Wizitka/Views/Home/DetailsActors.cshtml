@@ -1,0 +1,39 @@
+﻿@model Wizitka.Models.Actor
+
+@{
+    ViewBag.Title = "DetailsActors";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<div class="row row-bottom-padded-md">
+    <div class="col-md-8 col-md-offset-2 text-center ts-intro">
+
+        <h1>DetailsActors</h1>
+
+        <div class="fh5co-lead">
+            <h4>Actor</h4>
+            <hr />
+            <dl class="dl-horizontal">
+                <dt>
+                    @Html.DisplayNameFor(model => model.Name)
+                </dt>
+
+                <dd>
+                    @Html.DisplayFor(model => model.Name)
+                </dd>
+
+                <dt>
+                    @Html.DisplayNameFor(model => model.Info)
+                </dt>
+
+                <dd>
+                    @Html.DisplayFor(model => model.Info)
+                </dd>
+
+            </dl>
+        </div>
+        <p>
+            @Html.ActionLink("Edit", "Edit", new { id = Model.Id }) |
+            @Html.ActionLink("Back to List", "Index")
+        </p>
+    </div>
+</div>
