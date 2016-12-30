@@ -76,7 +76,9 @@ namespace Wizitka.Controllers
             newPerformance.Name = performance.Name;
             newPerformance.Price = performance.Price;
             newPerformance.DateTimeTuples = performance.DateTimeTuples;
-
+            newPerformance.Holl = performance.Holl;
+            newPerformance.Info = performance.Info;
+            newPerformance.Type = performance.Type;
             newPerformance.Actors.Clear();
             if (selectedActors != null)
             {

@@ -11,6 +11,9 @@ namespace Wizitka.Models
         public int Id { get; set; }
         // название
         public string Name { get; set; }
+        public string Info { get; set; }
+        public string Type { get; set; }
+        public string Holl { get; set; }
         // актеры
         //public List<Actor> Actors { get; set; }
         // цена
